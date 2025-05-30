@@ -7,10 +7,10 @@ export DEV_ENV_CONFIG_DIR="$HOME/{path_to_dev_env_config}"
 [ -s "$DEV_ENV_CONFIG_DIR/extend-bashrc.sh" ] && . "$DEV_ENV_CONFIG_DIR/extend-bashrc.sh"
 ```
 
-# VIM
+# LazyVim
 
 Install
 
 ```bash
-./install-vim.sh
+./installation.sh
 ```
