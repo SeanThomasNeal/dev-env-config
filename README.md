@@ -26,3 +26,9 @@ Nerd Font
     - Settings > Ubuntu > Appearance > Font Face
     - Select installed Nerd Font
 
+Other dependencies:
+
+```bash
+sudo apt install fd-find
+sudo apt install ripgrep
+```
