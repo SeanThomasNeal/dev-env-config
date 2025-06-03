@@ -1,6 +1,0 @@
-{
-  "Test Describe": {
-    "prefix": "testd",
-    "body": "describe(\"$(1:description)\", () => {\n\t\\\\ Arrange\n$0\n\n\t\\\\ Act\n\n\n\t\\\\ Assert\n\n});"
-  }
-}
