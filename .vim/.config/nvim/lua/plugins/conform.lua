@@ -1,7 +1,6 @@
 return {
   {
-    "stevearc/corform.nvim",
-    optional = true,
+    "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
@@ -11,10 +10,6 @@ return {
         ["typescriptreact"] = { "biome-check" },
         ["json"] = { "biome-check" },
         ["css"] = { "biome-check" },
-      },
-      format_on_save = {
-        lsp_format = "fallback",
-        timeout_ms = 500,
       },
     },
   },
