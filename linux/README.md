@@ -4,7 +4,7 @@ Add to .bashrc
 
 ```bash
 export DEV_ENV_CONFIG_DIR="$HOME/{path_to_dev_env_config}"
-[ -s "$DEV_ENV_CONFIG_DIR/linux/extend-bashrc.sh" ] && . "$DEV_ENV_CONFIG_DIR/linux/extend-bashrc.sh"
+[ -s "$DEV_ENV_CONFIG_DIR/linux/init.sh" ] && . "$DEV_ENV_CONFIG_DIR/linux/init.sh"
 ```
 
 # LazyVim
