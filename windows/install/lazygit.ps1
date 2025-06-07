@@ -1,3 +1,3 @@
-scoop bucket add lazygit
+scoop bucket add extras
 scoop install lazygit
 exit 0
