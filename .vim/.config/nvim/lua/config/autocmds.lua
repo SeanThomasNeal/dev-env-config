@@ -9,7 +9,7 @@
 vim.api.nvim_create_autocmd("DirChanged", {
   callback = function()
     local cwd = vim.fn.getcwd()
-    local parts = vim.fn.split(cwd, "\\")
+    local parts = vim.fn.split(cwd, "[\\/]")
     local projectFolder = vim.fn.get(parts, -1, "Error")
 
     vim.opt.title = true
