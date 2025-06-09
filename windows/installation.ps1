@@ -4,9 +4,6 @@ if (!(Test-Path ~\scoop)) {
 }
 
 $INSTALL_DIR="$DEV_ENV_CONFIG_DIR\windows\install"
-& "$INSTALL_DIR\c.ps1"
-& "$INSTALL_DIR\fd.ps1"
-& "$INSTALL_DIR\lazygit.ps1"
+
 & "$INSTALL_DIR\neovim.ps1"
-& "$INSTALL_DIR\nerdfonts.ps1"
-& "$INSTALL_DIR\ripgrep.ps1"
+& "$INSTALL_DIR\lazyvim-deps.ps1"
