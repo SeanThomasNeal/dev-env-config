@@ -1,20 +1,9 @@
-# Setup
-
-Add to .bashrc
-
-```bash
-export DEV_ENV_CONFIG_DIR="$HOME/{path_to_dev_env_config}"
-[ -s "$DEV_ENV_CONFIG_DIR/linux/init.sh" ] && . "$DEV_ENV_CONFIG_DIR/linux/init.sh"
-```
-
-# LazyVim
-
-### Install
+# Install
 
 From dev_env_config root
 
 ```bash
-./linux/installation.sh
+./linux/installation.sh <config_dir>
 ```
 
 ### Nerd Font
