@@ -1,4 +1,5 @@
-brew install gcc
+sudo apt update
+sudo apt install gcc
 brew install xsel
 brew install ripgrep
 brew install fd
