@@ -21,3 +21,7 @@ vim.keymap.set(
   { desc = "Doom" }
 )
 vim.keymap.set("n", "<leader>kkjjhlhlba<enter>", "<cmd>Doom<cr>", { desc = "Doom" })
+
+vim.keymap.set("n", "<F12>", function()
+  Snacks.picker.lsp_references()
+end, { desc = "References" })
