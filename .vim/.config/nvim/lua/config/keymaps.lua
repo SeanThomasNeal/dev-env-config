@@ -11,8 +11,8 @@ vim.keymap.set("v", "<A-Up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<
 
 vim.keymap.set("n", "<C-PageUp>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<C-PageDown>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<C-H>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move Buffer Prev" })
-vim.keymap.set("n", "<C-L>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move Buffer Next" })
+vim.keymap.set("n", "<A-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move Buffer Prev" })
+vim.keymap.set("n", "<A-l>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move Buffer Next" })
 
 vim.keymap.set(
   "n",
