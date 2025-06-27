@@ -13,3 +13,11 @@ vim.keymap.set("n", "<C-PageUp>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" }
 vim.keymap.set("n", "<C-PageDown>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<C-H>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move Buffer Prev" })
 vim.keymap.set("n", "<C-L>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move Buffer Next" })
+
+vim.keymap.set(
+  "n",
+  "<leader><Up><Up><Down><Down><Left><Right><Left><Right>ba<enter>",
+  "<cmd>Doom<cr>",
+  { desc = "Doom" }
+)
+vim.keymap.set("n", "<leader>kkjjhlhlba<enter>", "<cmd>Doom<cr>", { desc = "Doom" })
