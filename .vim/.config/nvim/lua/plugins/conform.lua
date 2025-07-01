@@ -4,12 +4,12 @@ return {
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
-        ["javascript"] = { "biome-check", "prettier" },
-        ["javascriptreact"] = { "biome-check", "prettier" },
-        ["typescript"] = { "biome-check", "prettier" },
-        ["typescriptreact"] = { "biome-check", "prettier" },
-        ["json"] = { "biome-check", "prettier" },
-        ["css"] = { "biome-check", "prettier" },
+        ["javascript"] = { "biome-check", prettier = "fallback" },
+        ["javascriptreact"] = { "biome-check", prettier = "fallback" },
+        ["typescript"] = { "biome-check", prettier = "fallback" },
+        ["typescriptreact"] = { "biome-check", prettier = "fallback" },
+        ["json"] = { "biome-check", prettier = "fallback" },
+        ["css"] = { "biome-check", prettier = "fallback" },
       },
     },
   },
