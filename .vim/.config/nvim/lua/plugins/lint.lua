@@ -21,6 +21,7 @@ return {
               "eslint.config.mjs",
               "eslint.config.cjs",
               ".eslintrc.js",
+              ".eslintrc.json",
               ".eslintrc.cjs",
               ".eslintrc.yaml",
               ".eslint.json",
