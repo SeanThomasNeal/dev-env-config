@@ -7,6 +7,7 @@ return {
       message_template = " <author> • <summary> • <date> • <<sha>>",
       date_format = "%m-%d-%Y %H:%M:%S",
       virtual_text_column = 1,
+      highlight_group = "LspCodeLens",
     },
   },
 }
