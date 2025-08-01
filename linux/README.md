@@ -32,3 +32,11 @@ From dev_env_config root
   - Settings > Ubuntu > Appearance > Font Face
   - Select installed Nerd Font
 
+### Work script
+
+Add the following to your .bashrc
+```bash
+export PROJECT_JSON="<path_to_your_project.json>"
+```
+```
+```

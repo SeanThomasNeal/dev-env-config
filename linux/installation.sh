@@ -17,6 +17,7 @@ fi
 
 cd "$DEV_ENV_CONFIG_DIR/linux/install"
 
+./jq.sh
 ./nvm.sh
 ./vim.sh
 ./lazyvim-deps.sh

@@ -1,0 +1,12 @@
+#!/bin/sh
+PROJECT_DIR=$(cat $PROJECT_JSON | jq ."$1".dir | tr -d '"')
+PROJECT_TITLE=$(cat $PROJECT_JSON | jq ."$1".title | tr -d '"')
+
+if [ ! -d "$PROJECT_DIR" ]; then
+  echo "Directory doesn't exist - $PROJECT_DIR"
+  exit 1
+fi
+
+cd "$PROJECT_DIR"
+echo -en "\033]0;$PROJECT_TITLE\a"
+nvim .
