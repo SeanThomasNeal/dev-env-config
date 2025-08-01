@@ -15,7 +15,7 @@ fi
   echo "[ -s \$DEV_ENV_CONFIG_INIT ] && . \$DEV_ENV_CONFIG_INIT"
 ) >>"$HOME/.bashrc"
 
-cd "$DEV_ENV_CONFIG_DIR/windows/install"
+cd "$DEV_ENV_CONFIG_DIR/linux/install"
 
 ./nvm.sh
 ./vim.sh
