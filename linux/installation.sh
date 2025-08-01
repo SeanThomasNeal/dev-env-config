@@ -15,6 +15,8 @@ fi
   echo "[ -s \$DEV_ENV_CONFIG_INIT ] && . \$DEV_ENV_CONFIG_INIT"
 ) >>"$HOME/.bashrc"
 
-./install/nvm.sh
-./install/vim.sh
-./install/lazyvim-deps.sh
+cd "$DEV_ENV_CONFIG_DIR/windows/install"
+
+./nvm.sh
+./vim.sh
+./lazyvim-deps.sh
