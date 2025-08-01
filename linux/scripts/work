@@ -1,8 +1,13 @@
-#!/bin/sh
-PROJECT_DIR=$(cat $PROJECTS_JSON | jq ."$1".dir | tr -d '"')
-PROJECT_TITLE=$(cat $PROJECTS_JSON | jq ."$1".title | tr -d '"')
+#!/bin/bash
+if [[ "$1" = @("-e"|"--edit") ]]; then
+  nvim "$PROJECTS_JSON"
+  exit 0
+fi
 
-if [ ! -d "$PROJECT_DIR" ]; then
+PROJECT_DIR=$(cat $PROJECTS_JSON | jq .["\"$1\""].dir | tr -d '"')
+PROJECT_TITLE=$(cat $PROJECTS_JSON | jq .["\"$1\""].title | tr -d '"')
+
+if [[ ! -d "$PROJECT_DIR" ]]; then
   echo "Directory doesn't exist - $PROJECT_DIR"
   exit 1
 fi
