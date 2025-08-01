@@ -1,6 +1,6 @@
 #!/bin/sh
-PROJECT_DIR=$(cat $PROJECT_JSON | jq ."$1".dir | tr -d '"')
-PROJECT_TITLE=$(cat $PROJECT_JSON | jq ."$1".title | tr -d '"')
+PROJECT_DIR=$(cat $PROJECTS_JSON | jq ."$1".dir | tr -d '"')
+PROJECT_TITLE=$(cat $PROJECTS_JSON | jq ."$1".title | tr -d '"')
 
 if [ ! -d "$PROJECT_DIR" ]; then
   echo "Directory doesn't exist - $PROJECT_DIR"
