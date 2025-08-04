@@ -1,4 +1,4 @@
-if vim.fn.has("win32") == 0 and vim.fn.has("win64") == 0 then
+if not require("lazyvim.util").is_win() then
   return
 end
 
