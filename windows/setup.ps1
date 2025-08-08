@@ -16,4 +16,4 @@ if (!(Test-Path $profile)) {
 "@ | Out-File -FilePath $profile -Encoding ascii -Append
 
 # Setup symbolic link to config folder
-New-Item -Path "$home\AppData\Local\nvim" -ItemType SymbolicLink -Value "$ConfigDir\.vim\.config\nvim"
+New-Item -Path "$home\AppData\Local\nvim" -ItemType SymbolicLink -Value "$ConfigDir\config\nvim"
