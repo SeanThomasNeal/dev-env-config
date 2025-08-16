@@ -6,10 +6,5 @@ if currentFolder == nil then
 end
 
 return {
-  {
-    dir = currentFolder .. "workspace.nvim",
-    config = function()
-      require("workspace")
-    end,
-  },
+  { dir = currentFolder .. "workspace.nvim" },
 }
