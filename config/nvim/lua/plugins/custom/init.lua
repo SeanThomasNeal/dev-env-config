@@ -7,5 +7,6 @@ if currentFolder == nil then
 end
 
 return {
+  { dir = currentFolder .. "util.nvim" },
   { dir = currentFolder .. "workspace.nvim" },
 }
