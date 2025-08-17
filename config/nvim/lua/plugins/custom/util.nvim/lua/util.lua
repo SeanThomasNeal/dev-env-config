@@ -24,7 +24,15 @@ function M.setup()
 end
 
 function M.getConfig(configName)
-  return vim.fn.get(config, configName)
+  local R = {
+    value = config[configName] or vim.empty_dict(),
+  }
+
+  function R.save()
+    M.setConfig(configName, R.config)
+  end
+
+  return R
 end
 
 function M.hasConfig(configName)
