@@ -21,4 +21,13 @@ vim.api.nvim_create_user_command("AddWorkspace", function(opts)
   saveConfig()
 end, { nargs = 1 })
 
+vim.api.nvim_create_user_command("RemoveWorkspace", function(opts)
+  vim.fn.remove(workspacesConfig, opts.fargs[1])
+  saveConfig()
+end, { nargs = 1 })
+
+vim.api.nvim_create_user_command("ListWorkspaces", function()
+  vim.notify(vim.fn.join(vim.fn.keys(workspacesConfig), " - "), 0)
+end, { nargs = 0 })
+
 return M
