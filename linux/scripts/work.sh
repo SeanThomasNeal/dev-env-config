@@ -1,3 +1,31 @@
+#!/bin/bash
+
+function work() {
+  if [[ "$1" = @("-e"|"--edit") ]]; then
+    nvim "$PROJECTS_JSON"
+    exit 0
+  fi
+
+  PROJECT_DIR=$(cat $PROJECTS_JSON | jq .["\"$1\""].dir | tr -d '"')
+  PROJECT_TITLE=$(cat $PROJECTS_JSON | jq .["\"$1\""].title | tr -d '"')
+
+  if [[ ! -d "$PROJECT_DIR" ]]; then
+    echo "Directory doesn't exist - $PROJECT_DIR"
+    exit 1
+  fi
+
+  cd "$PROJECT_DIR"
+
+  if [[ -f "$(pwd)/.nvmrc" ]]; then
+    nvm use
+  fi
+
+  if [[ "$2" = @("-o"|"--open") ]]; then
+    printf "\033]0;$PROJECT_TITLE\a"
+    nvim .
+  fi
+}
+
 _work() {
   COMPREPLY=()
   local cur_word=${COMP_WORDS[COMP_CWORD]}
