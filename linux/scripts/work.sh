@@ -15,13 +15,13 @@ function work() {
   fi
 
   cd "$PROJECT_DIR"
+  printf "\033]0;$PROJECT_TITLE\a"
 
   if [[ -f "$(pwd)/.nvmrc" ]]; then
     nvm use
   fi
 
   if [[ "$2" = @("-o"|"--open") ]]; then
-    printf "\033]0;$PROJECT_TITLE\a"
     nvim .
   fi
 }
