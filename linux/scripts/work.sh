@@ -15,14 +15,16 @@ function work() {
   fi
 
   cd "$PROJECT_DIR"
-  printf "\033]0;$PROJECT_TITLE\a"
 
   if [[ -f "$(pwd)/.nvmrc" ]]; then
     nvm use
   fi
 
   if [[ "$2" = @("-o"|"--open") ]]; then
+    set_title $PROJECT_TITLE
     nvim .
+  else
+    set_title "$PROJECT_TITLE (CLI)"
   fi
 }
 

@@ -11,4 +11,5 @@ ALIASES_DIR="$DEV_ENV_CONFIG_DIR/linux/aliases"
 
 SCRIPTS_DIR="$DEV_ENV_CONFIG_DIR/linux/scripts"
 
+. $SCRIPTS_DIR/set_title.sh
 . $SCRIPTS_DIR/work.sh
