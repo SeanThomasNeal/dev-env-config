@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function work() {
   if [[ "$1" = @("-e"|"--edit") ]]; then
     nvim "$PROJECTS_JSON"
