@@ -10,8 +10,12 @@ _work() {
       COMPREPLY=($(compgen -W "$options" -- "$cur_word"))
     fi
 
-    if [[ ${cur_word} == "-"* ]]; then
+    if [[ ${prev_word} == "work" && ${cur_word} == "-"* ]]; then
       COMPREPLY=($(compgen -W "-e --edit" -- "$cur_word"))
+    fi
+
+    if [[ ! ${prev_word} == "work" ]]; then
+      COMPREPLY=($(compgen -W "-o --open" -- "$cur_word"))
     fi
   fi
 }

@@ -14,4 +14,8 @@ fi
 
 cd "$PROJECT_DIR"
 echo -en "\033]0;$PROJECT_TITLE\a"
-nvim .
+if [[ "$2" = @("-o"|"--open") ]]; then
+  nvim .
+else
+  bash
+fi
