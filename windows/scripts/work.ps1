@@ -31,7 +31,6 @@ function Work {
   $project = $projects."$ProjectName"
   $title = $project.title
   $directory = $project.dir
-  Write-Host $directory
 
   cd $directory
   if ($Open) {
