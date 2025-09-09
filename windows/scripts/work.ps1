@@ -19,7 +19,8 @@ function Work {
   param(
     [ArgumentCompleter({ WorkProjectCompleter @args })]$ProjectName,
     [switch]$Edit,
-    [switch]$Open
+    [switch]$Open,
+    [switch]$Git
   )
 
   if ($Edit) {
@@ -36,6 +37,8 @@ function Work {
   if ($Open) {
     Set-Title $title
     nvim .
+  } else if ($Git) {
+    GitExtensions.exe .
   } else {
     Set-Title "$title (CLI)"
     clear

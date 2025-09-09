@@ -21,6 +21,8 @@ function work() {
   if [[ "$2" = @("-o"|"--open") ]]; then
     set_title $PROJECT_TITLE
     nvim .
+  elif [[ "$2" = @("-g"|"--git") ]]; then
+    GitExtensions.exe .
   else
     set_title "$PROJECT_TITLE (CLI)"
   fi
@@ -43,7 +45,7 @@ _work() {
     fi
 
     if [[ ! ${prev_word} == "work" ]]; then
-      COMPREPLY=($(compgen -W "-o --open" -- "$cur_word"))
+      COMPREPLY=($(compgen -W "-o --open -g -git" -- "$cur_word"))
     fi
   fi
 }
