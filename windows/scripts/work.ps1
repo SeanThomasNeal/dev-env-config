@@ -37,7 +37,7 @@ function Work {
   if ($Open) {
     Set-Title $title
     nvim .
-  } else if ($Git) {
+  } elseif ($Git) {
     GitExtensions.exe .
   } else {
     Set-Title "$title (CLI)"
