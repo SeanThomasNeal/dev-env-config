@@ -13,14 +13,6 @@ export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
 export PATH="$PATH:$BREW_HOME"
 ```
 
-# Install
-
-From dev_env_config root
-
-```bash
-./linux/installation.sh <config_dir>
-```
-
 ### Nerd Font
 
 - Install Fonts:
@@ -32,11 +24,56 @@ From dev_env_config root
   - Settings > Ubuntu > Appearance > Font Face
   - Select installed Nerd Font
 
-### Work script
+# Install
 
-Add the following to your .bashrc
+### Dependencies
+
 ```bash
-export PROJECT_JSON="<path_to_your_project.json>"
+brew install xsel
+brew install ripgrep
+brew install fd
+brew install fzf
+brew install lazygit
+brew install jq
 ```
+
+### Nvim config
+
+Add to .bashrc:
+
+```bash
+export DEV_ENV_CONFIG_DIR="<dev-env-config-dir>"
+export DEV_ENV_CONFIG_INIT="$DEV_ENV_CONFIG_DIR/linux/init.sh"
+[ -s $DEV_ENV_CONFIG_INIT ] && . $DEV_ENV_CONFIG_INIT
 ```
+
+
+### Git Aliases
+
+```bash
+# Git Pull
+git config --global alias.pr 'pull --rebase'
+git config --global alias.pm 'pull --merge'
+
+# Git Status
+git config --global alias.st 'status'
+
+# Git Add
+git config --global alias.a 'add'
+git config --global alias.aa 'add -A'
+
+# Git Commit
+git config --global alias.ci 'commit'
+git config --global alias.cinv 'commit --no-verify'
+
+# Git Log
+git config --global alias.l 'log'
+git config --global alias.lo 'log --oneline'
+git config --global alias.ll 'log -1 HEAD'
+
+# Git Reset
+git config --global alias.unstage 'reset HEAD --'
+
+# Git Checkout
+git config --global alias.co 'checkout'
 ```

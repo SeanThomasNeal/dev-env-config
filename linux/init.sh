@@ -1,13 +1,24 @@
-SETUP_DIR="$DEV_ENV_CONFIG_DIR/linux/setup"
+# Setup
 
-. $SETUP_DIR/nvm.sh
-. $SETUP_DIR/vim.sh
-. $SETUP_DIR/projects.sh
+export XDG_CONFIG_HOME="$DEV_ENV_CONFIG_DIR/config"
+export PROJECTS_JSON="$DEV_ENV_CONFIG_DIR/projects.json"
+if [ ! -f "$PROJECTS_JSON" ]; then
+  (
+    echo "{"
+    echo -e "\t\"config\": {"
+    echo -e "\t\t\"dir\": \"$DEV_ENV_CONFIG_DIR\","
+    echo -e "\t\t\"title\": \"dev-env-config\""
+    echo -e "\t}"
+    echo "}"
+  ) >>"$PROJECTS_JSON"
+fi
 
-ALIASES_DIR="$DEV_ENV_CONFIG_DIR/linux/aliases"
+# Aliases
 
-. $ALIASES_DIR/git.sh
-. $ALIASES_DIR/vim.sh
+alias vim="nvim"
+alias vi="nvim"
+
+# Scripts
 
 SCRIPTS_DIR="$DEV_ENV_CONFIG_DIR/linux/scripts"
 

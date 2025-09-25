@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     opts = {
       extension = {
         ["spec.ts"] = { glyph = "", hl = "MiniIconsOrange" },
