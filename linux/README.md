@@ -35,6 +35,9 @@ brew install fd
 brew install fzf
 brew install lazygit
 brew install jq
+brew install unzip
+sudo apt install python3
+sudo apt install -y python3-venv
 ```
 
 ### Nvim config
