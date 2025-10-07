@@ -3,14 +3,13 @@
 $XDG_CONFIG_HOME="$DEV_ENV_CONFIG_DIR/config"
 $PROJECTS_JSON="$DEV_ENV_CONFIG_DIR/projects.json"
 if (!(Test-Path -Path "$PROJECTS_JSON" -PathType Leaf)) {
-@"
-{
-  "config": {
-    "dir": "$DEV_ENV_CONFIG_DIR",
-    "title": "dev-env-config"
+  $DefaultConfig = [PSCustomObject]@{
+    config = [PSCustomObject]@{
+      dir = "$DEV_ENV_CONFIG_DIR"
+      title = "dev-env-config"
+    }
   }
-}
-"@ | Out-File -FilePath "$PROJECTS_JSON" -Encoding ascii -Append
+  $DefaultConfig | ConvertTo-Json | Out-File -FilePath "$PROJECTS_JSON" -Encoding ascii -Append
 }
 
 # Aliases
