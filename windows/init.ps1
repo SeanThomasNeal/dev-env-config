@@ -1,7 +1,7 @@
 # Setup
 
-$XDG_CONFIG_HOME="$DEV_ENV_CONFIG_DIR/config"
-$PROJECTS_JSON="$DEV_ENV_CONFIG_DIR/projects.json"
+$XDG_CONFIG_HOME="$DEV_ENV_CONFIG_DIR\config"
+$PROJECTS_JSON="$DEV_ENV_CONFIG_DIR\projects.json"
 if (!(Test-Path -Path "$PROJECTS_JSON" -PathType Leaf)) {
   $DefaultConfig = [PSCustomObject]@{
     config = [PSCustomObject]@{
@@ -19,7 +19,7 @@ Set-Alias -Name "vi" -Value "nvim"
 
 # Scripts
 
-$SCRIPTS_DIR="$DEV_ENV_CONFIG_DIR/windows/scripts"
+$SCRIPTS_DIR="$DEV_ENV_CONFIG_DIR\windows\scripts"
 
-. "$SCRIPTS_DIR/set-title.ps1"
-. "$SCRIPTS_DIR/work.ps1"
+. "$SCRIPTS_DIR\set-title.ps1"
+. "$SCRIPTS_DIR\work.ps1"
