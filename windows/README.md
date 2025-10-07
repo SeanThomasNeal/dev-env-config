@@ -32,6 +32,7 @@ scoop install JetBrainsMono-NF
 scoop bucket add extras
 scoop bucket add nerd-fonts
 
+scoop install gzip
 scoop install gcc
 scoop install fd
 scoop install lazygit
