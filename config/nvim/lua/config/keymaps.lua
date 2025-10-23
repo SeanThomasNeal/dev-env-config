@@ -29,3 +29,9 @@ end, { desc = "References" })
 vim.keymap.set("n", "<C-p>", function()
   Snacks.picker.git_files()
 end, { desc = "Find file in git tree" })
+
+vim.keymap.set("n", "<C-t><C-f>", function()
+  Snacks.picker.grep({
+    args = { "--glob=!**/*spec.*", "--glob=!**/*test.*" },
+  })
+end, { desc = "Grep files filtering out test files" })
